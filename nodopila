@@ -1,0 +1,10 @@
+public class nodopila {
+    int elemento;
+    ///String elemento;
+    nodopila siguiente;
+public nodopila(){
+    this.elemento=elemento;
+    siguiente=null;
+}
+
+}
