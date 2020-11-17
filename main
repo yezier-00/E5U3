@@ -1,0 +1,41 @@
+ */import java.util.Scanner;
+public class main {
+    public static void main(String[]args){
+         Scanner sn=new Scanner(System.in);
+        boolean salir=false;
+        int opcion;
+       coladinamica cola=new coladinamica();
+        while(!salir){
+            System.out.println("Dame una opcion del menu:");
+            System.out.println("1.-INSERTAR");
+            System.out.println("2.-ELIMINAR");
+            System.out.println("3.-MOSTRAR");
+            System.out.println("4.-SALIR:");
+               opcion=sn.nextInt();
+              
+            switch(opcion){
+                case 1:
+                System.out.println("palabra a insertar:");
+                String palabra=sn.next();
+                //int dato=sn.nextInt();
+                
+                cola.empujar(palabra);
+                        
+                    break;
+                case 2:
+                 cola.sacar();
+                    break;
+                case 3:
+                    cola.mostrar();
+                    break;
+                case 4:
+                    salir=true;
+                    break;
+                default:   
+                    System.out.println("la opcion no esta en el menu");
+            }
+             
+               }
+        System.out.println("final del menu");
+    }//main
+}//class
