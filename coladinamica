@@ -1,0 +1,23 @@
+public class coladinamica {
+    nodocola raiz;
+    int tamaño;
+    public void empujar(String  palabra){
+        nodocola nodo=new nodocola(palabra);
+        nodo.siguiente=raiz;
+        raiz=nodo;
+        tamaño++;
+    }
+    public void sacar(){
+        //cima=cima.siguiente;
+        raiz=raiz.siguiente;
+        tamaño--;
+    }
+    
+    public void mostrar(){
+        nodocola recorre=raiz;
+        while(recorre!=null){
+            System.out.println(recorre.elemento);
+            recorre=recorre.siguiente;
+        }
+    }
+}
